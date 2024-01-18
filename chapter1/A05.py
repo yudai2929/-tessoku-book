@@ -18,12 +18,16 @@ def LS():
 
 
 def main():
-    N = I()
-    print(calc_square_area(N))
+    N, K = LI()
 
+    count = 0
+    for i in range(1, N + 1):
+        for j in range(1, N + 1):
+            k = K - i - j
+            if 1 <= k <= N:
+                count += 1
 
-def calc_square_area(a):
-    return a * a
+    print(count)
 
 
 if __name__ == "__main__":
